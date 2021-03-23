@@ -23,7 +23,3 @@ const Filter = () => {
 };
 
 export default Filter;
-
-Filter.propTypes = {
-
-}

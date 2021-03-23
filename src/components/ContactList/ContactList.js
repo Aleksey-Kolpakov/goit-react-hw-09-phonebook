@@ -9,9 +9,8 @@ const ContactList = () => {
     const visibleContacts = useSelector(phonebookSelectors.getVisibleContacts);
     const dispatch = useDispatch()
     const deleteContact = id => dispatch(phonebookOperations.deleteContact(id));
-    const fetchContacts = () => dispatch(phonebookOperations.fetchContacts());
     useEffect(() => {
-        fetchContacts();
+        dispatch(phonebookOperations.fetchContacts());
     }, [])
     return (
         <ul className={styles.list}>

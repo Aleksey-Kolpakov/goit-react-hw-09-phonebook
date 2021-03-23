@@ -14,9 +14,8 @@ const HomePage = lazy(() => import('./pages/HomePage/HomePage' /* webpackChunkNa
 
 const App = () => {
   const dispatch = useDispatch();
-  const getCurrentUser = () => dispatch(authOperations.getUserData())
   useEffect(() => {
-    getCurrentUser()
+    dispatch(authOperations.getUserData())
   }, [])
   return (
     <>
